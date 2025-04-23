@@ -11,19 +11,33 @@ Este documento describe detalladamente cómo desplegué la aplicación web Poké
 - Desde la terminal (dentro de la carpeta del proyecto):
 
 1. Configure mi git bash con mi identidad
-     git config --global user.name
+  ```bash
+   git config --global user.name
+  ```
+ ```bash
      git config --global user.email
+ ```
 3. Inicializar el repositorio:
+    ```bash
      git init
-4. Añadir todos los archivos:
+     ```
+5. Añadir todos los archivos:
+    ```bash
      git add .
-5. Hacer el primer commit:
+     ```
+7. Hacer el primer commit:
+    ```bash
      git commit -m "Subir carpeta"
-6. Crear el repositorio en GitHub desde la web: [https://github.com/new](https://github.com/new)
-7. Conectar el repositorio local con GitHub:
-     git remote add origin https://github.com/TU_USUARIO/pokedex.git
-8. Subir el proyecto a GitHub:
+     ```
+9. Crear el repositorio en GitHub desde la web: [https://github.com/new](https://github.com/new)
+10. Conectar el repositorio local con GitHub:
+     ```bash
+     git remote add origin https://github.com/ZharickGarces12/pokedex.git
+      ```
+12. Subir el proyecto a GitHub:
+     ```bash
      git push -u origin main
+      ```
 
 ### Paso 3. Desplegar en Vercel
 #### Crear cuenta y conectar con GitHub
