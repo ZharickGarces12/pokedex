@@ -26,6 +26,64 @@ Ejecutar en la raíz del proyecto:
 ```
 npm start
 ```
+## Demo
+👉 [Ver aplicación en línea](https://pokedex-delta-ruddy-76.vercel.app/)
+
+## Requisitos
+Para desplegar este proyecto necesitas:
+
+- Una cuenta en GitHub → [https://github.com/](https://github.com/)
+- Una cuenta en Vercel → [https://vercel.com/](https://vercel.com/)
+- Node.js instalado si deseas probarlo localmente → [https://nodejs.org/](https://nodejs.org/)
+
+## Crear una cuenta en GitHub
+- Ve a GitHub → [https://github.com/](https://github.com/)
+- Haz clic en "Sign up" (Registrarse) en la esquina superior derecha
+- Completa el formulario con:
+  - Tu correo electrónico
+  - Una contraseña segura
+  - Un nombre de usuario único
+
+- Resuelve el rompecabezas de verificación cuando aparezca
+- Haz clic en "Create account" (Crear cuenta)
+- Verifica tu dirección de correo electrónico haciendo clic en el enlace recibido
+
+## Crear una cuenta en Vercel
+- Ve a Vercel → [https://vercel.com/](https://vercel.com/)
+- Haz clic en "Sign Up" (Registrarse) en la esquina superior derecha
+- Recomendamos seleccionar "Continue with GitHub" para vincular ambas cuentas directamente
+- Autoriza a Vercel para acceder a tu cuenta de GitHub cuando se solicite
+- Completa la información solicitada:
+   - Nombre completo
+   - Para "I'm creating an account for" selecciona la opción adecuada (Hobby, Work, etc.)
+   - Haz clic en "Continue" (Continuar)
+
+## Conectar GitHub con Vercel (si no utilizaste "Continue with GitHub")
+- Inicia sesión en tu cuenta de Vercel
+- Ve a Settings > Git
+- Haz clic en "Connect with GitHub"
+- Autoriza a Vercel para acceder a tus repositorios
+- Selecciona los repositorios que deseas que estén disponibles en Vercel o permite acceso a todos
+
+## Desplegar la aplicación Pokédex en Vercel
+- En el dashboard de Vercel, haz clic en "Add New..." > "Project"
+- Selecciona el repositorio de GitHub donde se encuentra tu proyecto Pokédex
+- Configuración del proyecto:
+   - Framework Preset: Angular
+   - Root Directory: Deja en blanco si tu proyecto está en la raíz del repositorio
+   - Build Command: ng build --prod (o el comando especificado en tu package.json)
+   - Output Directory: dist/pokedex (o la carpeta donde se genera tu build)
+   - Environment Variables: No se requieren para este proyecto específico
+- Haz clic en "Deploy" y espera a que se complete el proceso
+- Una vez finalizado, Vercel te proporcionará una URL para acceder a tu aplicación desplegada
+
+## Cómo se desplegó esta aplicación
+
+1. Se descargó el proyecto original como archivo `.zip`
+2. Se descomprimió y subió a un nuevo repositorio en GitHub usando la terminal
+3. Se vinculó el repositorio desde Vercel y se desplegó la aplicación
+
+Puedes ver todos los pasos detallados en el archivo [`Despliegue.md`](./Despliegue.md)
 
 ## Referencias
 
