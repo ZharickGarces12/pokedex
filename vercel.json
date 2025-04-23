@@ -4,6 +4,10 @@
         "source": "/(.*)",
         "headers": [
           {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; connect-src 'self' https://pokeapi.co https://beta.pokeapi.co; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"
+          },
+          {
             "key": "X-Frame-Options",
             "value": "SAMEORIGIN"
           },
