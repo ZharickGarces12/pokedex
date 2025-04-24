@@ -76,3 +76,27 @@ Este documento describe detalladamente cómo desplegué la aplicación web Poké
 - No fue necesario instalar dependencias localmente ni usar `ng serve`, ya que el despliegue se hizo 100% desde la nube.
 - Vercel se encargó de ejecutar automáticamente los comandos de build y hostear los archivos estáticos generados por Angular.
 
+## Cabeceras HTTP de Seguridad
+1. X-Frame-Options: SAMEORIGIN
+   - Previene que la página sea cargada dentro de un iframe (un marco dentro de una página web), lo que ayuda a prevenir ataques de clickjacking.
+2. X-Content-Type-Options: nosniff
+   - Impide que el navegador intente adivinar el tipo de contenido de una respuesta. Esto previene vulnerabilidades como la ejecución de archivos maliciosos si el servidor no define un tipo MIME correctamente.
+3. Referrer-Policy: strict-origin-when-cross-origin
+   - Controla la información que se envía en el encabezado Referer cuando se navega desde una página a otra. Con strict-origin-when-cross-origin, solo se envía el origen del referidor en solicitudes a 
+   dominios distintos.
+4. Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+   - Fuerza el uso de HTTPS (conexión segura) en el sitio web, lo que ayuda a prevenir ataques de man-in-the-middle. El valor max-age=63072000 asegura que esta política se aplique durante dos años.
+5. Permissions-Policy
+   - Controla qué permisos puede solicitar la página web, como acceso a la cámara, ubicación o micrófono. Los permisos aquí están deshabilitados para todas las funciones listadas.
+6. Cross-Origin-Opener-Policy: same-origin
+   - Aísla el contexto de navegación de la página actual de otras páginas de diferentes orígenes para evitar ciertos ataques, como la ejecución de scripts maliciosos.
+7. Cross-Origin-Resource-Policy: same-origin
+   - Evita que recursos de diferentes orígenes puedan ser accesados por otras páginas, mejorando la seguridad frente a ataques de recursos compartidos entre dominios.
+8. Cross-Origin-Embedder-Policy: require-corp
+   - Requiere que los recursos externos, como scripts o imágenes, vengan de orígenes que permitan ser cargados, ayudando a proteger contra ciertos tipos de ataques.
+9. Cache-Control: no-store, max-age=0
+   - Controla cómo se almacenan en caché las respuestas. no-store significa que no se debe almacenar en caché, y max-age=0 indica que la respuesta debe ser considerada como caducada inmediatamente.
+10. Content-Security-Policy
+   - Te da control total sobre de dónde y qué tipo de contenido se puede cargar en tu web. Es una capa esencial de defensa para proteger a los usuarios y evitar que scripts externos maliciosos se ejecuten.
+ 
+
